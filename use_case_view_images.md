@@ -39,7 +39,7 @@ The main goal of this use case is to display the full data set of the images in 
     * If there was any error in displaying the files, a message will be shown to the user.
 
 #### Use Case Diagram
-
+![view images](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/diagrams/view_images_diagram.png "view_images_diagram")
 
 Created By: Dylan Bunch
 

@@ -41,7 +41,7 @@ The data set is not loaded and, thus, no displayed information is present.
 4. The data has finished loading into the system and is ready to classify a new data set.
 
 #### Use Case Diagram
-![load data](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/diagrams/load_data_diagram.jpg "load_data_diagram")
+![load data](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/diagrams/load_data_diagram.png "load_data_diagram")
 
 Created By: Dylan Bunch
 
