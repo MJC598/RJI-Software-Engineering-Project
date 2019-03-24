@@ -21,12 +21,11 @@ Basic User
 2. There must be an Editor distinguished.
 
 #### Main Success Scenario (Goals)
-For this use case to succeed, the whole data set must be loaded into the system and displayed in some way (graphically or textually).
+For this use case to succeed, the whole data set must be loaded into the database.
 
 #### Alternate Success Scenarios
 * Data set is partially loaded, due to some corrupt files or unsupported file types.
-* Data set is fully loaded, but partially displayed..
-* Data set is partially loaded and partially displayed.
+* Data set is fully loaded, but some files were not stored in the database.
 
 #### Failed End Condition
 The data set is not loaded and, thus, no displayed information is present.
