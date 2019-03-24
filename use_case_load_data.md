@@ -12,9 +12,9 @@ This use case is specifically for loading the data into the system in order to b
 2. The dataset being empty, so the user is prompted to enter in a data set. 
 
 #### Actors
-Photographer
-Editor
-Basic User
+* Photographer
+* Editor
+* Basic User
 
 #### Preconditions
 1. There must be a data set to be loaded.

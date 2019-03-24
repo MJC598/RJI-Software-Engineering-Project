@@ -12,9 +12,9 @@ This use case is for viewing images that have already been loaded into the datab
 2. User selects option to display images.
 
 #### Actors
-Photographer
-Basic User
-Editor
+* Photographer
+* Basic User
+* Editor
 
 #### Preconditions
 1. The database of images not being empty.
