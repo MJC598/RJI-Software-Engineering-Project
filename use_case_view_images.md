@@ -23,14 +23,22 @@ This use case is for viewing images that have already been loaded into the datab
 The main goal of this use case is to display the full data set of the images in the database, graphically or textually. 
 
 #### Alternate Success Scenarios
-* Not all of the images in the database are displayed (will notify user of this, listed files not displayed if it can be done).
-* Images are displayed, but not in the intended way (graphically not showing thumbnails, just filenames; textually not displaying full file paths; etc.)
+* Not all of the images in the database are displayed.
+* Images are displayed, but not in the intended way.
 
 #### Failed End Condition
 * No images are displayed in any way
 
 #### Extensions
-
+1. Not all of the images in the database are displayed.
+    1. Notify user
+    2. Prompt reload
+	1. If reload fails, display only what can be loaded and inform user
+    3. Display all images.
+2. Images are displayed, but not properly (missing thumbnails or incomplete filenames)
+    1. Prompt reload
+	1. If reload fails, display what can be displayed.
+    2. Display all images.
 
 #### Steps of Execution (Requirements)
 1. The user chooses to display the images in the database.
