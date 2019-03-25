@@ -17,7 +17,7 @@ This use case describes how a basic user, photographer, and editor logs into the
 * Photographer
 * Basic User
 * Editor
-*Administrator
+* Administrator
 
 #### Preconditions
 1. Must be connected to a network
