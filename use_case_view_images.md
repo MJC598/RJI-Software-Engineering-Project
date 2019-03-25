@@ -51,6 +51,6 @@ The main goal of this use case is to display the full data set of the images in 
 
 Created By: Dylan Bunch
 
-Reviewed By: 
+Reviewed By: Olivia Bishop 
 
 Collaborated With: 
