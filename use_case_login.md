@@ -48,7 +48,7 @@ The main success scenario of this use case is the user successfully logs in and 
 
 Created by: Olivia Bishop
 
-Reviewed by:
+Reviewed by: Dylan Bunch
 
 Collaborated with: 
 
