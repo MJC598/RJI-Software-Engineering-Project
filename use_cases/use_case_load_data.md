@@ -31,7 +31,13 @@ For this use case to succeed, the whole data set must be loaded into the databas
 The data set is not loaded and, thus, no displayed information is present.
 
 #### Extensions
-
+1. Data set is partially loaded.
+    1. Inform user of the error.
+    2. Display list of files that were not loaded and, if possible, the reason why.
+2. Data set is fully loaded, but some files were not stored in the database.
+    1. Inform user of the error.
+    2. Display list of files that were not stored.
+    3. Prompt user to try loading those files again.
 
 #### Steps of Execution (Requirements)
 1. The user is prompted to select a folder of images or an individual image.
