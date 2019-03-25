@@ -42,7 +42,7 @@ The main success scenario of this use case is the user successfully logs in and 
 
 
 #### Use Case Diagram
-
+![view images](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/diagrams/use_case_login_diagram.png "login_diagram")
 
 
 
@@ -50,7 +50,7 @@ Created by: Olivia Bishop
 
 Reviewed by: Dylan Bunch
 
-Collaborated with: 
+Collaborated with: Matthew Carroll
 
 
 
