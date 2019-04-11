@@ -5,6 +5,12 @@ __pycache__/
 
 *.pem
 
+#don't include pictures
+*.jpg
+*.JPG
+*.png
+*.PNG
+
 # C extensions
 *.so
 
