@@ -11,6 +11,10 @@ __pycache__/
 *.png
 *.PNG
 
+#security please
+*.ppk
+*.pem
+
 # C extensions
 *.so
 
