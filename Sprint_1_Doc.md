@@ -33,7 +33,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 ## Database Design
 
 #### ERD
-
+![ERD](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/Sprint1RJI_ERD.jpg "Sprint1_ERD")
 
 #### DDL
 We will not be using a Database because of our design structure. The pictures and classifier (which will act as a model) will sit on an external server and an API will be used to communicate all relevant data to a webpage hosted on our ec2 instance. The ranks and tags we get from the quality evaluation will be placed in the metadata of the jpg and reported to the user via the API.
