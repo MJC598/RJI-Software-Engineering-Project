@@ -24,10 +24,8 @@ def train_it():
 
 
 #get score for measurable quality difference
-def 
+def evaluate_quality():
 
-#run classifier
-def run(classifier):
 
 #main
 if __name__ == '__main__'

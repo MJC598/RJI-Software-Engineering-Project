@@ -10,25 +10,60 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 ## Functional Requirements
 
 1. Load Data
-    * load\_data()
-	* Runs on RJI server
-	* Retrieves file paths and metadata regarding classification from RJI server calling get\_file\_paths(), get\_scores(), and get\_metadata()
-	* Sends the data back to our server and props up a flask database to hold image paths and scores for easy retrieval/display
+    1. load\_path()
+        * Input: User specified path
+        * Output: Boolean Value
+	    * Checks if path supplied is in use already or if pictures can be loaded to that specific location on the server. Returns True if avaliable, False otherwise
+        * If false is returned to this function, need to update user that path is already in use
+    2. save_folder()
+        * Input: image(s), path to save location
+        * Output: Boolean Value 
+        * Attempts to store image(s) at path on server. If it succeeds it returns True, otherwise it returns False.
+        * Should be able to be navigated to after data is loaded.
 2. View Metadata
-    * view\_metadata()
-	* Reads metadata from flask database from retrieve\_metadata(picture)
-	* Calls function in the view to display images with corresponding metadata in a readable fashion via display\_metadata(picture)
-	* Optionally displays corresponding image with display\_image(picture)
+    1. get_metadata()
+        * Input: Path
+        * Output: Gets Metadata off JPEG 
+        * This is the primary function call to view metadata, it will contain multiple helper functions
+    2. find_pic()
+        * Input: Path
+        * Output: Image
+        * Put in path, return picture location on server, primarily a helper function
+    2. extract_data()
+        * Input: Image
+        * Output: Metadata list, unsorted
+        * Given an image, this returns all the raw metadata associated with the image. It needs to be sorted
+    3. sort_data():
+        * Input: Raw Metadata List
+        * Output: Metadata dictionary
+        * This will return key/value pairs of data in JSON format so that it is easy to pull specific components and format it into a webpage
 3. Quality Evaluation
-    * evaluate\_quality()
-	* Runs on RJI server
-	* File paths to evaluate sent from our flask database to RJI server via evaluate\_these\_files(files[]) and calls classify() for each
-	* Writes quality score to metadata via store\_score(picture,score)
-	* If files are updated, send new score data back to flask database with update\_quality\_score(picture,score)
+    1. evaluate\_quality()
+        * Input: path to image
+        * Output: Ranking and tags stored in JPEG metadata on pic, list of ranks returned in picture order
+	    * Runs on RJI server next to pictures
+	    * Input supplied by user, output stored in picture data on server
+	    * If list of ranks is not null, return the list to the user associated with the path
+    2. find_features()
+        * Input: Test Image dataset in matrix form
+        * Output: feature list
+        * This function would enable us to actually pass a list of features to have the machine train on and speed up training and testing.
+    3. train()
+        * Input: Training Image Datasets
+        * Output: Trained classifier
+        * Train the classifier based on the training image data supplied. This would likely be in the form of a path. This function will likely contain a call to find_features for each of the training image datasets.
+        * This is the meat of the class and will take the most computational power.
 4. View Images
-    * view\_images()
-	* Select number of images viewed in paginated form via retrieve\_images(files[]), say 200 at a time, stores on server and deletes upon moving to new page
-	* Call ui function to display them on page (with/without corresponding score) via display\_images() (reading images from temporary directory)
+    1. view\_images()
+        * Input: path(s) to pictures
+        * Output: Images
+        * This is the main function of this use case, it will loop over the get_pic helper function to return all pictures selected.
+            * Might be worth adjusting to call it Asynchronously
+    2. get_pic()
+        * Input: path of a picture
+        * Output: Image
+        * Takes in one path and makes an API call to return 1 picture from the server.
+        * 
 
 ## Database Design
 
