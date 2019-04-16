@@ -33,7 +33,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
         * Input: Image
         * Output: Metadata list, unsorted
         * Given an image, this returns all the raw metadata associated with the image. It needs to be sorted
-    3. sort_data():
+    3. sort_data()
         * Input: Raw Metadata List
         * Output: Metadata dictionary
         * This will return key/value pairs of data in JSON format so that it is easy to pull specific components and format it into a webpage
