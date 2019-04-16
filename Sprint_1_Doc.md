@@ -63,7 +63,6 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
         * Input: path of a picture
         * Output: Image
         * Takes in one path and makes an API call to return 1 picture from the server.
-        * 
 
 ## Database Design
 
