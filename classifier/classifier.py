@@ -53,4 +53,5 @@ def evaluate_quality(paths):
 
 
 #main
-if __name__ == '__main__'
+if __name__ == '__main__':
+    print(evaluate_quality(sys.argv[1]))
