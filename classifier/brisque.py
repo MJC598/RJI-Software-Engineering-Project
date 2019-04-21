@@ -201,7 +201,3 @@ if(len(sys.argv) != 2):
     print("--------------------------------")
     print("Exiting")
     sys.exit(0)
-
-# calculate quality score
-qualityscore = test_measure_BRISQUE(sys.argv[1])
-print "Score of the given image: ", qualityscore
