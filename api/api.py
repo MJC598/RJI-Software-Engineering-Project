@@ -32,38 +32,6 @@ def api_all():
 
 
 app.run()"""
-
-"""def get_sample_images_json():
-    json_string1 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/1q/')
-    json_string1 = json_string1[:-1] + ','
-    json_string2 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/2q/')
-    json_string2 = " " + json_string2[1:]
-    json_string2 = json_string2[:-1] + ','
-    json_string3 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/3q/')
-    json_string3 = " " + json_string3[1:]
-    json_string3 = json_string3[:-1] + ','
-    json_string4 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/4q/')
-    json_string4 = " " + json_string4[1:]
-    json_string4 = json_string4[:-1] + ',' 
-    json_string5 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/1q/')
-    json_string5 = " " + json_string5[1:]
-    json_string5 = json_string5[:-1] + ',' 
-    json_string6 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/2q/')
-    json_string6 = " " + json_string6[1:]
-    json_string6 = json_string6[:-1] + ','
-    json_string7 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/3q/')
-    json_string7 = " " + json_string7[1:]
-    json_string7 = json_string7[:-1] + ',' 
-    json_string8 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/4q/')
-    json_string8 = " " + json_string8[1:]
-    json_string = json_string1 + json_string2 + json_string3 + json_string4 + json_string5 + json_string6 + json_string6 + json_string7 + json_string8
-    with open('data.json', 'w') as outfile:
-        json.dump(json_string,outfile)
-
-
-get_sample_images_json()"""
-
-
 import requests, re, json
 
 # creates a json string of tuples in the form [('filename', 'full_url_of_image')]
@@ -82,9 +50,12 @@ def get_images_from_url_obj(url):
     # zip the two lists together and ditch the first element since it's invariably '../'; store in list c
     c = list(zip(a,b))
     c.pop(0)
+<<<<<<< HEAD
 
     # return the object, not a json string
     return c
+=======
+>>>>>>> parent of fed49b9... added function - generates a list of file names and their corresponding ratings
 
 
 def get_images_from_url_json(url):
@@ -112,7 +83,34 @@ def get_images_from_url_json(url):
     # return json string, not an object
     return json_string
 
+def get_sample_images_json():
+    json_string1 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/1q/')
+    json_string1 = json_string1[:-1] + ','
+    json_string2 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/2q/')
+    json_string2 = " " + json_string2[1:]
+    json_string2 = json_string2[:-1] + ','
+    json_string3 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/3q/')
+    json_string3 = " " + json_string3[1:]
+    json_string3 = json_string3[:-1] + ','
+    json_string4 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/4q/')
+    json_string4 = " " + json_string4[1:]
+    json_string4 = json_string4[:-1] + ',' 
+    json_string5 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/1q/')
+    json_string5 = " " + json_string5[1:]
+    json_string5 = json_string5[:-1] + ',' 
+    json_string6 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/2q/')
+    json_string6 = " " + json_string6[1:]
+    json_string6 = json_string6[:-1] + ','
+    json_string7 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/3q/')
+    json_string7 = " " + json_string7[1:]
+    json_string7 = json_string7[:-1] + ',' 
+    json_string8 = get_images_from_url('http://rji.augurlabs.io/20170909_MuSc/4q/')
+    json_string8 = " " + json_string8[1:]
+    json_string = json_string1 + json_string2 + json_string3 + json_string4 + json_string5 + json_string6 + json_string6 + json_string7 + json_string8
+    with open('data.json', 'w') as outfile:
+        json.dump(json_string,outfile)
 
+<<<<<<< HEAD
 def format_names_and_ratings(names, ratings):
 
     # the big list
@@ -152,3 +150,7 @@ if __name__ == '__main__':
 
     # this is just for testing
     print test_names_and_ratings
+=======
+
+get_sample_images_json()
+>>>>>>> parent of fed49b9... added function - generates a list of file names and their corresponding ratings
