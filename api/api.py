@@ -32,34 +32,8 @@ def api_all():
 
 
 app.run()"""
-import requests, re, json
 
-# creates a json string of tuples in the form [('filename', 'full_url_of_image')]
-def get_images_from_url(url):
-    
-    # get the directory, its output is basically an HTML document with anchor tags for each image
-    r = requests.get(url)
-
-    # parses the HTML document and grabs everything inside quotation marks and stores these filenames in list a
-    a = re.findall('"([^"]*)"', r.text)
-
-    # add the url to each filename and store this full path in list b
-    url += '{0}'
-    b = [url.format(i) for i in a]
-
-    # zip the two lists together and ditch the first element since it's invariably '../'; store in list c
-    c = list(zip(a,b))
-    c.pop(0)
-
-    # turn c into a json_string
-    json_string = json.dumps(c)
-
-    # this is for testing. I do not recommend uncommenting this line, it is a very large output.
-    # print json_string
-
-    return json_string
-
-def get_sample_images_json():
+"""def get_sample_images_json():
     json_string1 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/1q/')
     json_string1 = json_string1[:-1] + ','
     json_string2 = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/2q/')
@@ -87,4 +61,71 @@ def get_sample_images_json():
         json.dump(json_string,outfile)
 
 
-get_sample_images_json()
+get_sample_images_json()"""
+
+
+import requests, re, json
+
+# creates a json string of tuples in the form [('filename', 'full_url_of_image')]
+def get_images_from_url(url):
+    
+    # get the directory, its output is basically an HTML document with anchor tags for each image
+    r = requests.get(url)
+
+    # parses the HTML document and grabs everything inside quotation marks and stores these filenames in list a
+    a = re.findall('"([^"]*)"', r.text)
+
+    # add the url to each filename and store this full path in list b
+    url += '{0}'
+    b = [url.format(i) for i in a]
+
+    # zip the two lists together and ditch the first element since it's invariably '../'; store in list c
+    c = list(zip(a,b))
+    c.pop(0)
+    return c
+
+    # turn c into a json_string
+    json_string = json.dumps(c)
+
+    # this is for testing. I do not recommend uncommenting this line, it is a very large output.
+    # print json_string
+
+    return json_string
+
+
+def format_names_and_ratings(names, ratings):
+
+    # the big list
+    names_and_ratings = []
+
+    # loop through the names one at a time and 
+    for i in range(0,len(names)-1):
+        
+        # create a new list to store into the big list
+        adding_list = [names[i][0], str(ratings[2 * i]), str(ratings[(2 * i) + 1])]
+
+        # append the new list to the list of lists
+        names_and_ratings.append(adding_list)
+
+    # print names_and_ratings
+
+    # return the newly created names and ratings; looks like [['name1', 'r1', 'r2'], [...], ['nameN', 'r2N-1', 'r2N']]
+    return names_and_ratings 
+
+if __name__ == '__main__':
+
+    # some test variables to ensure that things are working properly
+
+    #gets around 1000 images in ["filename", "filepath"] format
+    test_names = get_images_from_url('http://rji.augurlabs.io/20170902_MuMsu/1q/')
+
+    # creates a list of length equal to 2 times the number of elements in test_names to simulate the ratings for the images
+    test_ratings = []
+    for x in range(0,2 * len(test_names)):
+        test_ratings.append(x)
+
+    # combine the names of the images with the 2 ratings for said image into one big list
+    test_names_and_ratings = format_names_and_ratings(test_names,test_ratings)
+
+    # this is just for testing
+    # print test_names_and_ratings
