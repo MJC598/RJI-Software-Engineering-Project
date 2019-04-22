@@ -17,8 +17,9 @@ if sys.version_info[0] < 3:
 else:
     # if python 3.x version 
     # make sure the file is in libsvm/python folder
-    import svm
-    import svmutil
+    from libsvm import python
+    from python import svm
+    from python import svmutil
     from svm import *
     from svmutil import *
 
