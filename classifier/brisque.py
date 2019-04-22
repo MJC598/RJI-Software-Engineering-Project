@@ -12,15 +12,11 @@ import os
 if sys.version_info[0] < 3:
     import svm
     import svmutil
-    from svmutil import *
-    from svm import *
 else:
     # if python 3.x version 
     # make sure the file is in libsvm/python folder
     import svm
     import svmutil
-    from svm import *
-    from svmutil import *
 
 # AGGD fit model, takes input as the MSCN Image / Pair-wise Product
 def AGGDfit(structdis):
