@@ -10,6 +10,7 @@
 		<li><a class="active" href="">Search</a></li>
 		<li><a href="">About</a></li>
 		<li><a href="">Contact</a></li>
+		<li><a href="/view_images.php">View Images</a></li>
 	    </ul>
 	    <div id="container">
 		<h1>RJI Classifier</h1>
