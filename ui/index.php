@@ -14,8 +14,6 @@
 	    </ul>
 	    <div id="container">
 		<h1>RJI Classifier</h1>
-            <!--<button type="button">View Image Score!</button> -->
-            
 		 <div id="search_div">
 		    <input id="search_bar" type="text" placeholder="Search..">
 		</div>  
