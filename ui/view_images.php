@@ -15,17 +15,14 @@
     </head> 
     <body>
         <ul>
-        <li><a class="active" href="">Search</a></li>
+        <li><a href="/index.php">Search</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
+        <li><a class="active" href="">View Images</a></li>
         </ul>
         <div id="container">
-            <h1>RJI Classifier</h1>
+            <h1>RJI Classifier Ratings</h1>
                 <!--<button type="button">View Image Score!</button> -->
-                
-            <div id="search_div">
-                <input id="search_bar" type="text" placeholder="Search..">
-            </div>
             <table id="ratings" border="1">
                 <tr>
                     <td id="file_name">Image</td>
