@@ -50,12 +50,9 @@ def get_images_from_url_obj(url):
     # zip the two lists together and ditch the first element since it's invariably '../'; store in list c
     c = list(zip(a,b))
     c.pop(0)
-<<<<<<< HEAD
 
     # return the object, not a json string
     return c
-=======
->>>>>>> parent of fed49b9... added function - generates a list of file names and their corresponding ratings
 
 
 def get_images_from_url_json(url):
@@ -110,7 +107,6 @@ def get_sample_images_json():
     with open('data.json', 'w') as outfile:
         json.dump(json_string,outfile)
 
-<<<<<<< HEAD
 def format_names_and_ratings(names, ratings):
 
     # the big list
@@ -149,8 +145,7 @@ if __name__ == '__main__':
     test_names_and_ratings = format_names_and_ratings(test_names,test_ratings)
 
     # this is just for testing
-    print test_names_and_ratings
-=======
-
-get_sample_images_json()
->>>>>>> parent of fed49b9... added function - generates a list of file names and their corresponding ratings
+    # print test_names_and_ratings
+    
+    with open('names_and_ratings.json','w') as outfile:
+        json.dump(test_names_and_ratings,outfile)

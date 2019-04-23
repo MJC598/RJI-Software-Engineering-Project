@@ -82,6 +82,12 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 ### Completed:
 
+1. API
+    * Successfully retrieve information from server given path to a folder of images.
+    * Successfully convert these images into useful information, such as [filename,path] and [filename,rating1,rating2] tuples in a json string.
+    * Successfully write json strings out to files to be interpreted by the UI.
+2. UI
+3. Classifier
 
 ### To Do:
 
