@@ -9,6 +9,11 @@ ul {
     position: fixed;
     width: 100%;
 }
+
+#ratings{
+    color: white;
+}
+
 li {
     float: left;
 }
