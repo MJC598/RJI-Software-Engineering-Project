@@ -87,10 +87,19 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
     * Successfully convert these images into useful information, such as [filename,path] and [filename,rating1,rating2] tuples in a json string.
     * Successfully write json strings out to files to be interpreted by the UI.
 2. UI
+    * Successfully displayed _extremely_ rough page of pulled filenames and test ratings.
 3. Classifier
 
 ### To Do:
 
+1. API
+    * Connect API to classifier (waiting on finish, technical issues)
+2. UI
+    * Make homepage look nice
+    * Make page for displaying filenames and ratings look presentable
+    * Make page for uploading url to rate
+3. Classifier
+    *
 
 ## Files
 
@@ -118,4 +127,11 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 ### Technical Issues:
 
+1. API
+    * Issues properly outputting an enormous string of filenames and paths to be json parseable
+2. UI
+    * Issues parsing json file from API output
+3. Classifier
+    * Issues getting dependencies to work on ec2 instance (package manager is much more limited than we thought; pip and python versioning problems)
+    * 
 
