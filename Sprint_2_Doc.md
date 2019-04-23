@@ -74,9 +74,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 
 ## Visual Design
-
-
-
+![Visual Design](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/Visual_Design.jpg "Visual_Design")
 ## Project Direction
 
 
@@ -99,7 +97,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
     * Make page for displaying filenames and ratings look presentable
     * Make page for uploading url to rate
 3. Classifier
-    *
+    * Image upload
 
 ## Files
 
