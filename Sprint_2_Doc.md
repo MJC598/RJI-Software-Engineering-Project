@@ -7,6 +7,7 @@
 
 http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
+http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displays file name along with both technical & aesthetic scores)
 ## Functional Requirements
 
 1. Load Data
