@@ -82,8 +82,8 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 
 ### To Do:
-	
-	* Image upload
+
+* Image upload
 
 
 ## Files
