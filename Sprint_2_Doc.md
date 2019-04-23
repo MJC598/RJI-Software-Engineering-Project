@@ -8,6 +8,7 @@
 http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displays file name along with both technical & aesthetic scores)
+
 ## Functional Requirements
 
 1. Load Data
@@ -77,7 +78,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displa
 ## Visual Design
 ![Visual Design](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/Visual_Design.jpg "Visual_Design")
 ## Project Direction
-
+We started with the intent of trying to get Quality Evaluation working correctly. We immediately ran into dependency issues that lasted the entire week. We didn't decide till late in the weekend to switch to a focus more towards view_images. We now have a php script that can easily transcribe json files to html tables and a python script that can easily pull data from the server to the json file. It just is not 100% connected because we are still struggling with the dependencies in the quality evaluation, so our data is bad. 
 
 ### Completed:
 
@@ -88,6 +89,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displa
 2. UI
     * Successfully displayed _extremely_ rough page of pulled filenames and test ratings.
 3. Classifier
+    * Successfully found a classifier able to analyze technical aspects of picture with valid test results.
 
 ### To Do:
 
@@ -98,7 +100,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displa
     * Make page for displaying filenames and ratings look presentable
     * Make page for uploading url to rate
 3. Classifier
-    * Image upload
+    * Implement technical classifier and locate/build aesthetic classifier and dependencies.
 
 ## Files
 
@@ -106,6 +108,8 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displa
     * index.html
         * View Images, View Metadata
         * This is the primary file for the website's design, styling, and functionality
+    * view_images.php
+        * report data from names_and_ratings.json file output by api.py into an HTML table for user readability
 2. /classifier/
     * classification\_db\_connection.py
         * Quality Evaluation, Load Data
@@ -129,8 +133,19 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/view_images.php (displa
 1. API
     * Issues properly outputting an enormous string of filenames and paths to be json parseable
 2. UI
-    * Issues parsing json file from API output
+    * No Issues!
 3. Classifier
     * Issues getting dependencies to work on ec2 instance (package manager is much more limited than we thought; pip and python versioning problems)
-    * 
+        * libsvm installation failed on opening a shared object file
+        * tried setting up a virtual environment to account for both version of python installed on the ec2
+        * tried importing each file directly as opposed to a python package
+        * looked for new installer from apt-get, yum, pip, and pip3 for various packages
+        * copied and pasted directly from the github trying to fix any descrepencies
+        * Felt stuck when I was able to successfully import every file correctly but the file was unable to successfully open the shared object file
+        * Came to office hours 3-4:30pm 4/22/19
+    * Data cap on ec2
+        * removed all training pictures on ec2 instance so we could continue trying to troubleshoot the classifier.
+    * Github issues
+        * Github claimed info on the deployment environment was caught up to branch when it was in fact 3 commits behind
+            * removed and re-cloned the repo onto the deployment environment
 
