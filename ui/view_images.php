@@ -33,7 +33,7 @@
             </tr>
 
             <?php 
-                $json_file = json_decode("names_and_ratings.json", true);
+                $json_file = json_decode(file_get_contents("names_and_ratings.json"), true);
                 foreach($json_file as $json_list){ ?>
                 <tr>
                     <td height="119"><?php echo $json_list[0]; ?></td>
