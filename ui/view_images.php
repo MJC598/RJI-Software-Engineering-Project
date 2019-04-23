@@ -26,11 +26,11 @@
             <div id="search_div">
                 <input id="search_bar" type="text" placeholder="Search..">
             </div>
-            <table id="ratings" width="200" border="1">
+            <table id="ratings" border="1">
                 <tr>
-                    <td width="85">Image</td>
-                    <td width="99">Technical Score</td>
-                    <td width="99">Aesthetic Score</td>
+                    <td id="file_name">Image</td>
+                    <td id="tech_rating">Technical Score</td>
+                    <td id="aesthetic_rating">Aesthetic Score</td>
                 </tr>
 
                 <?php 

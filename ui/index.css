@@ -12,6 +12,21 @@ ul {
 
 #ratings{
     color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#file_name{
+ width: 70%;
+}
+
+#tech_rating{
+ width: 15%;
+}
+
+#aesthetic_rating{
+    width: 15%;
 }
 
 li {
