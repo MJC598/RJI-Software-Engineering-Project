@@ -74,8 +74,7 @@ http://ec2-13-59-146-242.us-east-2.compute.amazonaws.com/
 
 
 ## Visual Design
-
-
+![Visual Design](https://github.com/MJC598/RJI-Software-Engineering-Project/blob/master/Visual_Design.jpg "Visual_Design")
 
 ## Project Direction
 
