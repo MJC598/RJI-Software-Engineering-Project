@@ -26,22 +26,23 @@
             <div id="search_div">
                 <input id="search_bar" type="text" placeholder="Search..">
             </div>
-            <tr>
-                <td width="85">Image</td>
-                <td width="99">Technical Score</td>
-                <td width="99">Aesthetic Score</td>
-            </tr>
-
-            <?php 
-                $json_file = json_decode(file_get_contents("names_and_ratings.json"), true);
-                foreach($json_file as $json_list){ ?>
+            <table width="200" border="1">
                 <tr>
-                    <td height="119"><?php echo $json_list[0]; ?></td>
-                    <td><?php echo $json_list[1]; ?></td>
-                    <td><?php echo $json_list[2]; ?></td>
+                    <td width="85">Image</td>
+                    <td width="99">Technical Score</td>
+                    <td width="99">Aesthetic Score</td>
                 </tr>
-            <?php } ?>
 
+                <?php 
+                    $json_file = json_decode(file_get_contents("names_and_ratings.json"), true);
+                    foreach($json_file as $json_list){ ?>
+                    <tr>
+                        <td height="119"><?php echo $json_list[0]; ?></td>
+                        <td><?php echo $json_list[1]; ?></td>
+                        <td><?php echo $json_list[2]; ?></td>
+                    </tr>
+                <?php } ?>
+            </table>
         </div>
     </body>
 </html>
