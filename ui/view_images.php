@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
     <?php 
-
-        $json_file = json_decode("names_and_ratings.json", true);
-        foreach($json_file as $json_list){
-
+        $path = '/var/www/RJI-Software-Engineering-Project/pictures/rji.augurlabs.io/20170902_MuMsu/1q'
+        foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as $filename){
+            // filter out "." and ".."
+            // if ($filename->isDir()) continue;
+            $old_path = getcwd();
+            chdir('/var/www/image-quality-assessment');
+            $output = shell_exec('./run_classifier.sh ' + $filename);
+            chdir($old_path)
+            // echo "$filename\n";
         }
+
+        // $json_file = json_decode("names_and_ratings.json", true);
+        // foreach($json_file as $json_list){
+
+        // }
 
     ?>
     <head lang="en">
